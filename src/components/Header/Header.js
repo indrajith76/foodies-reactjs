@@ -1,7 +1,7 @@
-import logo from "../logo.png";
+import logo from '../../logo.png';
 import React from "react";
 
-const Header = () => {
+const Header = ({handleSearch}) => {
   return (
     <nav className="bg-emerald-700">
       <div className="navbar container mx-auto">
@@ -12,6 +12,7 @@ const Header = () => {
         </div>
         <div className="form-control w-[40%] mr-20">
           <input
+            onChange={(e)=>handleSearch(e.target.value)}
             type="text"
             placeholder="Search"
             className="input input-bordered w-full"
@@ -19,7 +20,7 @@ const Header = () => {
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <label tabIndex={0} htmlFor="my-drawer-4" className="btn btn-ghost btn-circle drawer-button">
               <div className="indicator">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -38,20 +39,6 @@ const Header = () => {
                 <span className="badge badge-sm indicator-item">8</span>
               </div>
             </label>
-            <div
-              tabIndex={0}
-              className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
-            >
-              <div className="card-body">
-                <span className="font-bold text-lg">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
-                <div className="card-actions">
-                  <button className="btn btn-primary btn-block">
-                    View cart
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -1,7 +1,6 @@
 import React from "react";
 
 const Product = ({ product }) => {
-  console.log(product);
   const {
     strMeal :name,
     strMealThumb:image,

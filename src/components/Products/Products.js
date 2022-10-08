@@ -2,7 +2,6 @@ import React from "react";
 import Product from "../Product/Product";
 
 const Products = ({ products }) => {
-  console.log(products);
   return (
     <div>
       <div className="container mx-auto grid grid-cols-3 justify-items-center gap-y-10 mt-10">
@@ -10,7 +9,6 @@ const Products = ({ products }) => {
           <Product key={product.idMeal} product={product}></Product>
         ))}
       </div>
-      
     </div>
   );
 };
